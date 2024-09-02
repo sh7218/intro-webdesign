@@ -1,0 +1,72 @@
+<!-- Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: JavaScript
+Subi Hwang
+April 18, 2023 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">Programming Languages</a></h1>
+      <nav>
+           <a href="java.html">JAVA</a>
+           <a href="c++.html">C++</a>
+           <a href="javascript.html">JavaScript</a>
+        </nav>
+         <svg class="menu" viewBox="0 0 30 30" role="button">
+       <title>Navigation Menu Icon</title>
+       <line x1="8" x2="22" y1="10" y2="10" stroke="violet" stroke-linecap="round" />
+       <line x1="8" x2="22" y1="16" y2="16" stroke="violet" stroke-linecap="round" />
+       <line x1="8" x2="22" y1="22" y2="22" stroke="violet" stroke-linecap="round" />
+       </svg>
+    </header>
+    <h2>JAVA</h2>
+    <main>
+        <figure>
+           <a href="java.html" title="Access the JAVA Page">
+           <img src="images/java.png" srcset="images/java-2x.png 2x" alt="JAVA" width="200" height="200" sizes = "(max-width: 44.9em) 200px">
+           </a>
+
+           <a href="c++.html" title="Access the C++ Page">
+           <img src="images/c++.png" srcset="images/c++-2x.png 2x"alt="C++" width="200" height="200" sizes = "(max-width: 44.9em) 200px" class="language">
+           </a>
+
+           <a href="javascript.html" title="Access the JavaScript Page">
+           <img src="images/js.png" srcset="images/js-2x.png 2x" alt="JavaScript" width="200" height="200" sizes = "(max-width: 44.9em) 200px" class="language">
+           </a>
+        </figure>
+
+    <div class="wrapper">    
+      <div class="a"> General Information: Oriented programming language developed by Sun Microsystems in 1995. The name of the founder is James Gosling. It is a compiled language that is designed to be portable, which means that it can be run on any platform that has a Java Virtual Machine (JVM) installed. In other words, an important feature of Java is that it is a platform-independent language. Java emphasizes the use of objects to represent data and functionality. The language contains vast library of classes and Application Programming Interfaces (APIs) that can be used to build a wide range of applications that are not only desktop softwares but also Android mobile apps and enterprise-level web applications. In 2010, Oracle acquired Sun Microsystems and owned Java's copyright.  </div>
+
+      <div class="b"> Contrasting with C/C++: Unlike the C/C++ compiler, which links source code directly into machine language, the Java compiler generates a byte code, class file (.class) that has to be read and executed in machine language via JVM.</div>
+
+    </div>
+    </main>
+
+      <style>
+      .a, .b {
+        font-family: Roboto;
+        background-color: rgba(255, 0, 0, 0.6);
+        padding: 10px;
+        border: 1px solid red;
+        border-radius: 10px; /* rounded corners */
+      }
+    </style>
+      <footer>
+      <figure>
+          <a href="https://www.nyu.edu/" title="Access NYU Home Page">
+          <img src="images/nyu.png" srcset="images/nyu-2x.png 2x" alt="New York University Logo" width="360" height="62" sizes = "(max-width: 44.9em) 360px">
+          </a>
+        </figure>
+         <p><a href="https://cs.nyu.edu/home/index.html" title="Access NYU CS Home Page"><span class="web">Introduction to Web Design<span/></a></p>
+    </footer>
+    <script src="second-interaction.js"></script>
+  </body>
+</html>

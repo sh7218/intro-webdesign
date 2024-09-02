@@ -1,0 +1,68 @@
+<!-- Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: Final Project
+Subi Hwang
+May 2, 2023 -->
+
+<!-- Page 4: Contact page
+Contact page will provide numbers of contacts to indicate how to get in touch with the applicant, which is me. 
+-->
+
+<!-- Semantic text elements on each page (0.5 point): <h1>,<h2>,<p>,<a>...etc
+There should be semantic section elements on each page (1 point): <nav>, <header>, <main>...etc 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <!-- The viewport should be set on all HTML pages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header>
+      <h1><a id="header1" href="index.html">Home Page</a></h1>
+		<!-- Pages should link to each other with “relative” URLs; longer pages should incorporate anchor links (1 point) -->
+         <nav>
+              <a href="education.html">Education</a>
+              <a href="skills.html">Skills</a>
+              <a href="contact.html">Contact</a>
+        </nav>
+
+       <svg class="menu" viewBox="0 0 30 30" role="button">
+       <title>Navigation Menu Icon</title>
+       <line x1="8" x2="22" y1="10" y2="10" stroke="grey" stroke-linecap="round" />
+       <line x1="8" x2="22" y1="16" y2="16" stroke="grey" stroke-linecap="round" />
+       <line x1="8" x2="22" y1="22" y2="22" stroke="grey" stroke-linecap="round" />
+       </svg>
+
+    </header>
+    <h2>Contact Info </h2>
+        <main>
+        <div class="wrapper-contact"> 
+          <div class="a">
+			<!-- Each page should include properly formatted JPG, PNG, GIF, or SVG images; img elements should include src, width, height, and alt attributes with appropriate values (1 point) -->
+            <img src="images/imessage.png" alt="imessage" width="200" height="200" >
+			</div>
+		  <div class="b">
+		  	<p>Phone Number<br/> (551) 316-1547</p>
+		  </div>
+			<div class="c">
+            <img src="images/gmail.png" alt="gmail" width="200" height="200" > 
+			</div>
+			<div class="d">
+				<p>Email Address<br/> ghkdtnql36@gmail.com</p>
+			</div>
+			<div class="e">
+            <img src="images/instagram.png" alt="instagram" width="200" height="200" >
+			</div>
+			<div class="f">
+			<p>Instagram ID<br/> sssubi___</p>
+			</div>
+
+        </main>
+    <script src="first-interaction.js"></script>
+    <script src="second-interaction.js"></script>
+  </body>
+</html>

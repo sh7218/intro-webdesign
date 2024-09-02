@@ -1,0 +1,49 @@
+<!-- Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: CSS
+Subi Hwang
+February 19, 2023  -->
+<!DOCTYPE html>
+<html>
+ <!-- 1. The assignments home page should include an internal style sheet—within the <head> section of the document—with at least two different CSS rule sets. -->
+  <head>
+  <style>
+    /*CSS rule set 1*/
+    body {
+      background-color: white;
+      background-image: url("images/nyu-seal.png");
+      background-size: 130px 118px; /* width and height */
+      background-repeat: repeat;
+      background-position: center top;
+      background-attachmemt: fixed; 
+
+    }
+    /*CSS rule set 2*/
+    h1{
+      color: #4b0082; /*color: indigo*/
+      font-family: Optima, sans-serif; /*fallback font: sans-serif;*/
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+</style>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+  </head>
+  <body>
+    <h1>Introduction to Web Design</h1>
+
+    <!-- 2. The assignments home page should include two or more different inline style rules—as style attributes of HTML elements. -->
+    <p style="color: black; font-size 1.3em; font-family: Optima, sans-serif; line-height: 1.4em;"> Hello, my name is Subi Hwang. I am from South Korea. I go to NYU, and my major is Computer Science. </p>
+     
+    <ul style="color: #4b0082; font-size 1em; font-family: Optima, sans-serif: line-height: 1em;">
+      <li><a href="me/index.html">HTML</a></li>
+      <li><a href="index.html">CSS</a></li>
+      <li>Raster Graphics</li>
+      <li>Vector Graphics</li>
+      <li>Page Layout</li>
+      <li>Responsive Design</li>
+      <li>JavaScript</li>
+      <li>Final Project</li>
+    </ul>
+  </body>
+</html>
+

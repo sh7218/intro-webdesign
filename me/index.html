@@ -1,0 +1,52 @@
+<!-- Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: HTML
+Subi Hwang
+February 08, 2023 -->
+
+<!-- 1. A new website of at least three pages about the student => This is Page 1.-->
+<!-- 2. Website should be in its own subdirectory called “me” and the home page should be an “index.html” file. -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+  </head>
+  <!-- 3. Each page should include semantic text elements, including both paragraph and heading text. -->
+  <body>
+     <header>
+     <h1><a href="index.html">Subi Hwang</a></h1>
+     <!-- 4 (first part). Pages should link to each other with relative URLs-->
+      <nav>
+        <!-- 6. At least one of the new pages should include an ordered, unordered, or description list -->
+         <ul>
+            <li><a href="interest.html">interest</a></li>
+             <li><a href="experience.html">experience</a></li>
+          </ul>
+      </nav>
+     </header>
+
+    <!-- 7. There should be semantic section elements on each page, including <main>, <header>, and <footer>.  -->
+     <main>
+        <figure>
+          <a href="index.html" title="Access the Home Page">
+            <!-- 5) Each page should include at least one image in JPG, PNG, GIF, or SVG format; all image elements should include src, width, height, and alt attributes with appropriate values. -->
+          <img src="images/subi.JPG" alt="Subi Hwang in New York" width="1000" height="667">
+          </a>
+        </figure>
+      <article id = "Background">
+        <h2>Background</h2>
+        <p>Graduated in Spring 2024 as a dynamic Computer Science student at New York University with a strong foundation in both theoretical and applied aspects of technology. Versatile in a spectrum of programming languages, I am driven by the challenge of solving complex problems and contributing to meaningful technological advancements. My experience includes initiating a LikeLion coding club at NYU and serving as a Girls Who Code college mentor, gaining valuable experience in leadership, team building, and collaboration.</p>
+      </article>
+    </main>
+    <footer>
+      <figure>
+         <!-- 4 (second part). each page should also include an absolute URL linking to an external website; and the assignments directory should link to the home page of the “me” website. -->
+          <a href="https://www.nyu.edu/" title="Access NYU Home Page">
+          <img src="images/nyu.jpeg" alt="New York University Logo" width="220" height="81">
+          </a>
+        </figure>
+        <p><a href="https://cs.nyu.edu/home/index.html" title="Access NYU CS Home Page">Introduction to Web Design</a></p>
+    </footer>
+  </body>
+</html>

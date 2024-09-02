@@ -1,0 +1,26 @@
+/*Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: Raster Graphics
+Subi Hwang
+February 26, 2023 */
+
+body{
+	/*A background image of 1920 × 1920 pixels in JPG format (1 point)*/
+	background-image: url('newyork.jpg');
+	/*The background image should cover the browser window seamlessly and proportionally (1 point)*/
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/*The foreground image should be placed along one side of the browser window with non-static CSS positioning (1 point)*/
+img{
+	position: fixed;
+	right: 3px;
+	bottom: 100px;
+}
+
+
+h1{
+	color: #0D98BA; /*color: blue green*/ 
+	font-family: Brush Script MT, Cursive; /*fallback font: Cursive*/
+  font-size: 3em;
+}

@@ -1,0 +1,58 @@
+<!-- Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: HTML
+Subi Hwang
+February 08, 2023 -->
+
+<!-- 1. A new website of at least three pages about the student => This is Page 2.-->
+<!-- 2. Website should be in its own subdirectory called “me” and the home page should be an “index.html” file.; check index.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang| Interest</title>
+  </head>
+  <!-- 3. Each page should include semantic text elements, including both paragraph and heading text. -->
+  <body>
+    <header>
+        <h1><a href="index.html">Subi Hwang</a></h1>
+        <h2>Interest</h2>
+    </header>
+
+    <!-- 7. There should be semantic section elements on each page, including <main>, <header>, and <footer>.  -->
+    <main>
+      <article id = "Restaurants and café">
+        <h3>Restaurants and café</h3>
+
+        <figure>
+          <a href="index.html" title="Access the Home Page">
+          <!-- 5. Each page should include at least one image in JPG, PNG, GIF, or SVG format; all image elements should include src, width, height, and alt attributes with appropriate values.  -->
+          <img src="images/nudake.jpg" alt="Cafe in Seoul" width="600" height="787">
+          </a>
+        </figure>
+        <!-- 6. At least one of the new pages should include an ordered, unordered, or description list => check index.html-->
+        <!-- 4 (first part). Pages should link to each other with relative URLs-->
+        <p>One of <a href="index.html" title="Access the home page">my</a> interests is visiting cafes and restaurants.</p>
+        <p>The picture shows the NUDAKE Seongsu located in Seoul.</p>
+        They introduced rabbit cakes for 2023 in collaboration with Korean idol New Jeans. </p><p>I visited on January 9 2023.</p>
+      </article>
+      <article id = "Travel">
+        <h3>Travel</h3>
+        <figure>
+          <a href="index.html" title="Access the Home Page"></a> 
+          <img src="images/airplane.jpg" alt="air plane" width = "600" height="400">
+        </figure>
+        I enjoy traveling during Summer or Winter vacation as well. I love to <a href="experience.html" title="Access the Experience Page">experience</a>  new cultures and visiting various places around the world. 
+     </article>
+    </main>
+     <footer>
+      <figure>
+         <!-- 4 (second part). each page should also include an absolute URL linking to an external website; and the assignments directory should link to the home page of the “me” website.  -->
+          <a href="https://www.nyu.edu/" title="Access NYU Home Page">
+          <img src="images/nyu.jpeg" alt="New York University Logo" width="220" height="81">
+          </a>
+        </figure>
+      <p><a href="https://cs.nyu.edu/home/index.html" title="Access NYU CS Home Page">Introduction to Web Design</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+/*Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: Final Project
+Subi Hwang
+May 2, 2023 */ 
+
+/*One external stylesheet for the whole site; style rules should specify font family and font size 
+for paragraph and heading text as well as link states (1.5 points)*/
+
+/*A web font applied with the CSS @font-face rule (0.5 point)*/
+@font-face {
+  font-family: 'Basic';
+  src: url('fonts/Basic-Regular.ttf') format('truetype');
+}
+
+@font-face {
+ font-family: 'Oswald';
+ src: url('fonts/Oswald-Regular.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	background-color: white;
+}
+
+h1{
+	color: black;
+	font-family: Basic, sans-serif; /*fallback font: sans-serif;*/
+  font-size: 1.5em;
+}
+
+h2{
+	color: white;
+  background-color: black;
+  font-family: Basic, sans-serif; /*fallback font: sans-serif;*/
+  font-size: 1em;
+}
+
+nav{
+	color: black; 
+	font-family: Basic, sans-serif; /*fallback font: sans-serif;*/
+  font-size: 1.5em;
+  display: none; /* hide navigation */
+  flex-direction: column;
+}
+
+main > figure > a > img {
+     width: 100%;
+     height: auto;
+}
+
+.language{
+        opacity: 0.2;
+}
+
+a:link, nav > a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited, nav > a:visited  {
+  color: lightgray;
+}
+
+a:hover, nav > a:hover  {
+  color: gray;
+}
+
+a:active, nav > a:active  {
+  color: gray;
+  text-decoration: none;
+}
+
+header {
+  background-color: hsl(100, 100%, 100%);
+  display: flex;
+  flex-direction: column;
+  height: 2.5em;
+  position: sticky;
+  top: 0;
+}
+
+svg.menu {
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  top: 1em;
+  right: 1em;
+}
+
+svg.menu:hover {
+  cursor: pointer;
+}
+
+nav.toggle {
+  display: flex;
+}
+
+header.toggle {
+  height: 8em;
+}
+
+header, h2, footer {
+  padding: 1em;
+}
+/*The CSS Flexible Box Layout Module (Flexbox) for arranging items along one axis and/or 
+the CSS Grid Layout Module for the overall page structure (1.5 points)*/
+/*Mobile-optimized layout should be limited to one column; 
+desktop layout should include two or more columns (1 point)*/
+
+  .a {grid-area: a;}
+  .b {grid-area: b;}
+  .c {grid-area: c;}
+  .d {grid-area: d;}
+  .e {grid-area: e;}
+  .f {grid-area: f;}
+
+  .wrapper-education {
+    display: grid;
+    grid-template-columns: 300px;
+    column-gap: 10px;
+    row-gap: 1em;
+
+    grid-template-areas: /* placing grid items */
+      'a'
+      'b'
+      'c'
+      'd';
+    }
+  .wrapper-education > .b{
+    color: black; 
+  }
+
+  .wrapper-skills {
+    display: grid;
+    grid-template-columns: 450px;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    grid-template-areas: /* placing grid items */
+      'a'
+      'b'
+      'c'
+      'd';
+    }
+
+  .wrapper-skills > .b,.wrapper-skills >.c,.wrapper-skills >.d {
+      font-family: Oswald;
+      margin-left: 40px;
+      font-size: 1.2em;
+      color: black; /*fix*/
+      margin-bottom: 45px;
+  }
+
+  .big{
+    font-size: 1.7em;
+  }
+
+  .wrapper-contact {
+    display: grid;
+    grid-template-columns: 300px;
+    margin-left: 55px;
+    margin-top: 55px;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    grid-template-areas: /* placing grid items */
+      'a'
+      'b'
+      'c'
+      'd'
+      'e'
+      'f';
+    }
+
+  .wrapper-contact > .b,.wrapper-contact >.d,.wrapper-contact >.f {
+      font-family: Oswald;
+      margin-left: 30px;
+      font-size: 1.5em;
+      color: black; /*fix*/
+  }
+      
+/*The CSS should include at least two @media queries: 
+one to optimize the layout for different browser widths and 
+one for the user’s preferred color scheme (1.5 points)*/
+
+/*Desktop layout*/
+@media (min-width: 45em) {
+
+	h2{
+	  font-size: 1.7em;
+	}
+
+  .language{
+          opacity: 0.2;
+        }
+
+/*Mobile-optimized layout should be limited to one column; 
+desktop layout should include two or more columns (1 point)*/
+  /* grid template areas */
+
+      .wrapper-education {
+        display: grid;
+        grid-template-columns: 300px 300px 200px 200px 200px;
+        column-gap: 10px;
+        row-gap: 1em;
+
+        grid-template-areas: /* placing grid items */
+          'a a b b b'
+          'a a c d d';
+        }
+
+      .wrapper-skills {
+        display: grid;
+         grid-template-columns: 450px 400px;
+        column-gap: 10px;
+        row-gap: 10px;
+
+        grid-template-areas: /* placing grid items */
+          'a b'
+          'a c'
+          'a d';
+        }
+
+      .wrapper-skills > .b,.wrapper-skills > .c,.wrapper-skills > .d {         
+          margin-top: 45px;
+          margin-bottom: none;
+      }
+
+      .wrapper-contact {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+
+        grid-template-areas: /* placing grid items */
+          'a c e'
+          'b d f';
+        }
+
+		  header {
+		    flex-direction: row;
+		    height: 2.5em;
+		  }
+
+		  header.toggle {
+		    height: 4.5em;
+		  }
+
+		  nav {
+		    display: flex;
+		    flex-direction: row;
+		  }
+
+		  nav > a {
+		    margin-left: 1em;
+		  }
+
+		  svg.menu {
+		    display: none; /* hide menu icon */
+		  }
+
+}
+	/*Dark mode*/
+		@media only screen and (prefers-color-scheme: dark) {
+
+			body{
+			   background-color: #121212; /*dark gray*/
+		 	}
+
+			h1{
+		     color: white; 
+	    }
+
+      h2{
+         font-size: 25px;
+         color: black;
+         background-color: white;
+      } 
+
+	    nav {
+	 	    color: white; 
+	    }
+
+      header {
+      background-color: #121212;
+      }
+	    .language{
+        opacity: 0.2;
+      }
+
+			a:link, nav > a:link{
+  			color: white;
+  			text-decoration: none;
+			}
+			a:visited, nav > a:visited {
+			  color: gray; 
+			}
+
+			a:hover, nav > a:hover {
+ 			 color: #BBBBBB; 
+			}
+
+			a:active, nav > a:active {
+ 			 color: #BBBBBB;
+ 			 text-decoration: none;
+			}
+    .wrapper-education > .b{
+      color: white; 
+    }
+    .wrapper-skills > .b,.wrapper-skills >.c,.wrapper-skills >.d {
+        color: white;
+    }
+    .wrapper-contact > .b,.wrapper-contact >.d,.wrapper-contact >.f {
+    color: white;
+  }
+
+}

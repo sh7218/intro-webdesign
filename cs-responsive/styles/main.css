@@ -1,0 +1,181 @@
+/*Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: Responsive Design
+Subi Hwang
+April 6, 2023*/
+
+/*1. A completely revised version of the previous website, optimized for mobile devices (3 points) */
+
+/*2. Relative units such as fr, minmax(), and percentage should be used for most CSS widths (1 point)*/
+
+/*3. The viewport should be set on all pages and the CSS should include at least two 
+@media queries: one to optimize the layout for different browser widths 
+and one for the user’s preferred color scheme (3 points)*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+ul {
+	list-style: none; /* removing bullet points from the ul */
+	margin-left: 0;
+	padding-left: 0;
+
+	display: flex; 
+	flex-direction: column; 
+}
+
+body{
+	background-color: white;
+}
+
+img {
+      width: 100%;
+      height: auto;
+    }
+
+h1{
+	color: #000000; /*color: black*/ 
+	font-family: Comic Sans MS, Comic Sans, cursive; /*fallback font: sans-serif;*/
+  font-size: 1.5em;
+}
+
+h2{
+	color: #4b0082; /*color: indigo*/ 
+	font-family: Comic Sans MS, Comic Sans, cursive; /*fallback font: sans-serif;*/
+  font-size: 1em;
+}
+
+main > figure {
+      display: grid;
+      /* Part of 2: fr (relative unit) is used for widths */
+      grid-template-rows: repeat(3, 1fr); /* three fractional height rows */
+
+     }
+       .language{
+          opacity: 0.2;
+        }
+
+/* grid template areas */
+
+      .a {grid-area: a;}
+
+      .b {grid-area: b;}
+
+      .wrapper {
+        display: grid;
+        /* Part of 2: fr (relative unit) is used for widths */
+        grid-template-columns: repeat(2, 1fr); /* two fractional width columns */
+        grid-template-rows: none; 
+        row-gap: 1em;
+        grid-template-areas: /* placing grid items */
+          'a a'
+          'b b'
+      }
+
+a:link{
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: #4b0082; /*color: indigo*/ 
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: blue;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Part of 3: one to optimize the layout for different browser widths */
+/*Desktop layout*/
+@media (min-width: 45em) {
+	ul {
+		flex-direction: row; 
+		column-gap: 20px;
+	}
+
+	h1{
+		color: #000000; /*color: black*/
+		font-family: Comic Sans MS, Comic Sans, cursive; /*fallback font: sans-serif*/
+	  font-size: 3em;
+	}
+
+	h2{
+		color: #4b0082; /*color: indigo */
+		font-family: Comic Sans MS, Comic Sans, cursive; /*fallback font: sans-serif;*/
+	  font-size: 1.7em;
+	}
+
+  main > figure  {
+  	/* Part of 2: fr (relative unit) is used for widths */
+  		grid-template-rows: none;
+  		/*4. Desktop layout should include two or more columns with the CSS flex or grid layout modules (1 point)*/
+      grid-template-columns: repeat(3, 1fr); /* three fractional width columns */
+     }
+
+  .language{
+          opacity: 0.2;
+        }
+
+  /* grid template areas */
+
+      .a {grid-area: a;}
+
+      .b {grid-area: b;}
+
+      .wrapper {
+        display: grid;
+        /* Part of 2: fr (relative unit) is used for widths */
+        grid-template-columns: repeat(4, 1fr); /* four fractional width columns */
+        column-gap: 10px;
+        row-gap: 1em;
+        grid-template-areas: /* placing grid items */
+          'a a b b';
+        }
+
+}
+	/*Part of 3: one for the user’s preferred color scheme (3 points) */
+	/*Dark mode*/
+		@media only screen and (prefers-color-scheme: dark) {
+
+			body{
+			   background-color: #121212;
+		 	}
+
+			h1{
+		     color: white; 
+	    }
+
+	    h2{
+	 	    color: #CF9FFF; /*color: Light Violet*/ 
+	    }
+
+	    .language{
+        opacity: 0.2;
+      }
+
+			a:link{
+  			color: white;
+  			text-decoration: none;
+			}
+			a:visited {
+			  color: #CF9FFF; /*color: Light Violet*/ 
+			}
+
+			a:hover {
+ 			 color: red;
+			}
+
+			a:active {
+ 			 color: blue;
+ 			 text-decoration: none;
+			}
+
+		}
+
+

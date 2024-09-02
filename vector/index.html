@@ -1,0 +1,64 @@
+<!-- Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: Vector Graphics
+Subi Hwang
+March 07, 2023  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <!-- 5. The SVG logo should be coded into the home page of the student’s i6 account with the <svg> element and, for accessibility, the <title> element (1 point) -->
+    <svg width="550" height="300">
+      <title>SVG Logo</title> 
+        
+      <defs>
+        <linearGradient id="gradient1">
+          <stop offset="0%" stop-color="pink" />
+          <stop offset="100%" stop-color="magenta" />
+        </linearGradient>
+
+        <linearGradient id="gradient2">
+          <stop offset="0%" stop-color="purple" />
+          <stop offset="100%" stop-color="white" />
+        </linearGradient>
+      </defs>
+
+<!-- 1. An original vector graphic with at least three SVG drawing elements (3 points) -->
+      <g id="shapes">
+        <!-- 3. There should be at least two links embedded in the SVG, from different parts of the image (2 points) -->
+        <!-- square -->
+        <a href="https://www.nyu.edu">
+          <rect x="0" y="50" width="200" height="200" fill="url(#gradient1)" opacity="0.8" />
+        </a>
+        
+        <!-- circle -->
+        <a href="https://cs.nyu.edu">
+          <circle cx="100" cy="150" r="50" fill="url(#gradient2)" opacity="0.8" />
+        </a>
+<!-- 2. There should be an SVG <text> element with the student’s initials (1 point) -->
+        <!-- text -->
+      <text x="82" y="155" fill="black" font-family="'Brush Script MT', cursive" font-size="22">SH</text>
+        <!-- line -->
+        <line x1="80" y1="160" x2="120" y2="160" stroke="black" stroke-width="1" />
+      </g>
+
+    </svg>
+
+    <h1>Introduction to Web Design</h1>
+    <p>Hello, my name is Subi Hwang. I am from South Korea. I go to NYU, and my major is Computer Science. </p>
+    <ul>
+      <li><a href="me/index.html">HTML</a></li>
+      <li><a href="css/index.html">CSS</a></li>
+      <li><a href="images/index.html">Raster Graphics</a></li>
+      <li><a href="vector/index.html">Vector Graphics</a></li>
+      <li><a href="cs/index.html">Page Layout</a></li>
+      <li><a href="cs-responsive/index.html">Responsive Design</a></li>
+      <li>JavaScript</li>
+      <li>Final Project</li>
+    </ul>
+  </body>
+</html>

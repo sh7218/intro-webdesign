@@ -1,0 +1,57 @@
+<!-- Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: Page Layout
+Subi Hwang
+March 30, 2023  -->
+
+<!-- 2. A new website in its own subdirectory; the website should consist of at least three pages with properly-formatted images, appropriately-marked up text, and semantic section elements (3 points); Page 1 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subi Hwang</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">Programming Languages</a></h1>
+      <!-- 5. CSS Flexbox is applied at least once on each page (1 point) => refer main.css -->
+      <nav>
+           <ul>
+              <li><a href="java.html">JAVA</a></li>
+               <li><a href="c++.html">C++</a></li>
+               <li><a href="javascript.html">JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+      <h2>Three Main Programming Languages</h2>
+        <main>
+          <a href="java.html" title="Access the JAVA Page">
+          <img src="images/java.png" alt="JAVA" width="200" height="200">
+          </a>
+
+          <a href="c++.html" title="Access the C++ Page">
+          <img src="images/c++.png" alt="C++" width="200" height="200">
+          </a>
+
+          <a href="javascript.html" title="Access the JavaScript Page">
+          <img src="images/js.png" alt="JavaScript" width="200" height="200">
+          </a>
+        </main>
+        <!-- 4. CSS Grid is applied for the overall structure of each page (3 points) -->
+        <style>
+          main {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); /* three fractional width columns */
+          }
+        </style>
+  <footer>
+      <figure>
+          <a href="https://www.nyu.edu/" title="Access NYU Home Page">
+          <img src="images/nyu.jpeg" alt="New York University Logo" width="220" height="81">
+          </a>
+        </figure>
+         <p><a href="https://cs.nyu.edu/home/index.html" title="Access NYU CS Home Page"><span class="web">Introduction to Web Design<span/></a></p>
+    </footer>
+  </body>
+</html>

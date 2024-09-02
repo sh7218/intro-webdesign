@@ -1,0 +1,14 @@
+/*Introduction to Web Design and Computer Principles CSCI-UA 4 - 003 
+HW: Vector Graphics
+Subi Hwang
+March 07, 2023 */
+/* 4. The SVG should be styled with CSS in the web page’s stylesheet; 
+  styles should include hover and active link states (3 points)*/
+
+      svg {float: right;}
+
+      rect:hover {fill: magenta;}
+      rect:active {fill: #9400D3;}
+
+      circle:hover {fill: purple;}
+      circle:active {fill: #A52A2A;}
